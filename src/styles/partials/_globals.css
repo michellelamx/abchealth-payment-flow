@@ -12,8 +12,8 @@ html {
 
 * {
   box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 :focus {
@@ -27,9 +27,8 @@ button {
   border: 1px solid var(--color-button-primary);
   border-radius: 0.75rem;
   color: var(--color-button-text);
-  cursor: pointer;
   display: flex;
-  font-size: 1rem;
+  font-size: var(--font-size-body-reg);
   justify-content: center;
   padding: 0.75rem 2.5rem;
   width: 100%;
@@ -59,17 +58,21 @@ a {
 .content-wrapper {
   width: 100%;
 
-  @media (width > 48rem) and (width < 67.5rem){
-    width: 23.5rem;
-  }
-
-  @media (width >= 67.5rem) {
+  @media (width > 48rem) {
     width: 23.5rem;
   }
 }
 
 .body-sm-bold {
   font-size: var(--font-size-body-sm);
-  line-height: 1.43;
   font-weight: 700;
+  line-height: 1.43;
+}
+
+.loading-message {
+  color: var(--color-text-welcome);
+  font-family: var(--font-decorative);
+  font-size: var(--font-size-display);
+  font-weight: 500;
+  margin-block-start: 6rem;
 }

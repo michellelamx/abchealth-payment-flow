@@ -1,4 +1,5 @@
 import { AppLayout } from '@containers/AppLayout'
+import { UserProvider } from '@context/userContext'
 import { WelcomePage } from '@pages/WelcomePage'
 import { PaymentPage } from '@pages/PaymentPage'
 import { SuccessPage } from '@pages/SuccessPage'
@@ -34,5 +35,9 @@ const createRouter = () => {
 export default function App() {
   const router = createRouter();
 
-  return router ? <RouterProvider router={router} /> : <div>Loading...</div>
+  return (
+    <UserProvider>
+      { router ? <RouterProvider router={router} /> : <div className='loading-message'>Loading...</div> }
+    </UserProvider>
+  )
 }

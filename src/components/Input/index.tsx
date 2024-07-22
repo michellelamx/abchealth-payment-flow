@@ -3,6 +3,7 @@ import { AlertIcon } from '@components/Svg/alertIcon'
 import { UseFormRegisterReturn } from 'react-hook-form'
 import styles from './main.module.css'
 
+
 interface InputProps {
   id: string
   label: string

@@ -2,6 +2,7 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import { PaymentPage } from '@pages/PaymentPage'
 import { describe, expect, it, vi } from 'vitest'
 
+
 interface CreditCardFormProps {
   onFormSubmit: () => void
   onContinue: () => void

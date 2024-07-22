@@ -1,6 +1,6 @@
-import styles from './main.module.css'
 import { useUser } from '@context/userContext'
 import { Link } from 'react-router-dom'
+import styles from './main.module.css'
 
 
 export const WelcomePage = () => {

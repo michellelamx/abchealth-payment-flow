@@ -1,7 +1,7 @@
-import styles from './main.module.css'
-import { useUser } from '@context/userContext'
 import { VisaIcon } from '@components/Svg/visaIcon'
+import { useUser } from '@context/userContext'
 import { Link } from 'react-router-dom'
+import styles from './main.module.css'
 
 
 export const ReviewAndPay = () => {

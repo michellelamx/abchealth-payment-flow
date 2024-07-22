@@ -1,3 +1,4 @@
+import { mockService } from '@data/mockService'
 import {
   createContext,
   Dispatch,
@@ -7,7 +8,7 @@ import {
   useState,
   useEffect
 } from 'react'
-import { mockService } from '@data/mockService'
+
 
 type User = {
   id: number

@@ -1,7 +1,8 @@
-import styles from './main.module.css'
 import { CreditCardForm } from '@components/CreditCardForm'
 import { ReviewAndPay } from '@components/ReviewAndPay'
 import { ReactNode, useState } from 'react'
+import styles from './main.module.css'
+
 
 export const PaymentPage = () => {
   const [activeSection, setActiveSection] = useState<number | null>(1)

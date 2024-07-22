@@ -5,7 +5,7 @@
   width: 100%;
 
   .paymentSection {
-    border-bottom: 1px solid var(--color-border-primary);
+    border-bottom: 0.0625rem solid var(--color-border-primary);
     padding: 0 2rem 2rem;
 
     &.expanded {
@@ -28,7 +28,7 @@
       border-radius: 50%;
       color: var(--color-text-secondary);
       display: inline-flex;
-      font-size: 1rem;
+      font-size: var(--font-size-body-reg);
       font-weight: 700;
       height: 1.5rem;
       justify-content: center;

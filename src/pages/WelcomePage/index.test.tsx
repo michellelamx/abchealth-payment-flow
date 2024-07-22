@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react'
 import { WelcomePage } from '@pages/WelcomePage'
 import { describe, expect, it } from 'vitest'
 
+
 describe('WelcomePage', () => {
   const renderComponent = () => {
     render(<WelcomePage />)
