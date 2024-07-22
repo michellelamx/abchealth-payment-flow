@@ -1,8 +1,11 @@
-import styles from './main.module.css'
 import { Input } from '@components/Input'
-import { SubmitHandler, useForm } from 'react-hook-form'
+import { useUser } from '@context/userContext'
+import { mockService } from '@data/mockService'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { SubmitHandler, useForm } from 'react-hook-form'
 import * as z from 'zod'
+import styles from './main.module.css'
+
 
 const CreditCardSchema = z.object({
   cardNumber: z
@@ -38,6 +41,8 @@ export const CreditCardForm = ({
   onContinue,
   isFormValid
 }: CreditCardFormProps) => {
+  const { setCreditCardInfo } = useUser()
+
   const {
     register,
     handleSubmit,
@@ -53,8 +58,9 @@ export const CreditCardForm = ({
     },
   })
 
-  const onSubmit: SubmitHandler<CreditCardInput> = (data) => {
-    console.log(JSON.stringify(data))
+  const onSubmit: SubmitHandler<CreditCardInput> = async (data) => {
+    await mockService.saveCreditCardInfo(data)
+    setCreditCardInfo(data)
     onFormSubmit()
   }
 

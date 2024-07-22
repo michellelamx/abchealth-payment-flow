@@ -1,24 +1,30 @@
 import styles from './main.module.css'
+import { useUser } from '@context/userContext'
 import { Link } from 'react-router-dom'
 
 
 export const WelcomePage = () => {
+  const { userInfo } = useUser()
+
+  if (!userInfo) {
+    return <div>Loading...</div>
+  }
 
   return (
     <>
       <div className={`${styles.welcomeMessage} content-wrapper`}>
         <div className='accent-text'>
-          Hi, Taylor
+          Hi, {userInfo.name}
         </div>
         <div className={styles.welcomeDetails}>
-          You have 6 medical bills ready from ABC Health System. You can pay your bills here or verify your identity to view full bill details.
+          You have {userInfo.invoices} medical bills ready from ABC Health System. You can pay your bills here or verify your identity to view full bill details.
         </div>
       </div>
       <div className={styles.paySection}>
         <div className='content-wrapper'>
           <div className={styles.totalDue}>
             Total due
-            <span className='accent-text'>$600.00</span>
+            <span className='accent-text'>{`$${userInfo?.balance.toFixed(2)}`}</span>
           </div>
           <Link
             className='button-link'

@@ -23,11 +23,13 @@
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
       "@containers/*": ["./src/containers/*"],
+      "@context/*": ["./src/context/*"],
+      "@data/*": ["./src/data/*"],
       "@pages/*": ["./src/pages/*"],
       "@styles/*": ["./src/styles/*"],
     },
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },
-  "include": ["src"],
+  "include": ["src", "mockService.ts"],
   "exclude": ["node_modules"],
 }

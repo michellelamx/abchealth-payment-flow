@@ -5,6 +5,7 @@ import { SuccessPage } from '@pages/SuccessPage'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import '@styles/main.css'
 
+
 const createRouter = () => {
 
   return createBrowserRouter([
@@ -33,5 +34,5 @@ const createRouter = () => {
 export default function App() {
   const router = createRouter();
 
-  return router ? <RouterProvider router={router} /> : <div>Loading...</div>;
+  return router ? <RouterProvider router={router} /> : <div>Loading...</div>
 }
