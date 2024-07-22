@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "types": ["vite-plugin-svgr/client", "vitest/globals"],
+  },
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    },
+    {
+      "path": "./tsconfig.app.json"
+    }
+  ],
+}

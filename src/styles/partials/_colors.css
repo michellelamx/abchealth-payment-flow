@@ -1,0 +1,18 @@
+:root {
+  --color-bg-primary: hsl(212, 100%, 97%);
+  --color-bg-accent: hsl(224, 80%, 56%);
+  --color-bg-disabled: hsl(225, 20%, 92%);
+  --color-surface-primary: hsl(0, 0%, 100%);
+  --color-text-welcome: hsl(241, 71%, 25%);
+  --color-text-primary: hsl(240, 36%, 14%);
+  --color-text-secondary: hsl(240, 10%, 44%);
+  --color-text--alert: hsl(359, 51%, 52%);
+  --color-border-primary: hsl(225, 20%, 92%);
+  --color-link-text: hsl(224, 80%, 56%);
+  --color-button-primary: hsl(224, 80%, 56%);
+  --color-button-text: hsl(0, 0%, 100%);
+  --color-input-border: hsl(233, 11%, 48%);
+  --color-input-border--focus: hsl(224, 80%, 56%);
+  --color-input-text: hsl(240, 36%, 14%);
+  --color-input-border--alert: hsl(359, 51%, 52%);
+}

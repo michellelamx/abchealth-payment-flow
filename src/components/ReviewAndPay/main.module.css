@@ -1,0 +1,26 @@
+.reviewContainer {
+
+  .reviewDetails {
+    font-size: var(--font-size-header);
+  }
+
+  .paymentAmount {
+    font-weight: 700;
+  }
+
+  .paymentDetails {
+    margin-block: 1.8rem 2.5rem;
+
+    .paymentHeader {
+      color: var(--color-text-secondary);
+    }
+
+    .paymentMethod {
+      align-items: center;
+      display: flex;
+      font-size: var(--font-size-body-sm);
+      gap: 0.75rem;
+      margin-block-start: 0.25rem;
+    }
+  }
+}

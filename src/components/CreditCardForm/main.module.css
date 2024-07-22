@@ -1,0 +1,10 @@
+.creditCardForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .inputRow {
+    display: flex;
+    flex-direction: row;
+  }
+}

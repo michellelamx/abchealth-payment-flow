@@ -1,0 +1,95 @@
+.paymentContainer {
+  background-color: var(--color-surface-primary);
+  border-radius: 1rem;
+  margin-block: 0;
+  width: 100%;
+
+  .paymentSection {
+    border-bottom: 1px solid var(--color-border-primary);
+    padding: 0 2rem 2rem;
+
+    &.expanded {
+      height: 100%
+    }
+  }
+
+  .sectionHeader {
+    align-items: center;
+    display: flex;
+    font-size: var(--font-size-header);
+    font-weight: 700;
+    gap: 1rem;
+    line-height: 1.2;
+    padding-block: 1.25rem;
+
+    .sectionNumber {
+      align-items: center;
+      background-color: var(--color-bg-disabled);
+      border-radius: 50%;
+      color: var(--color-text-secondary);
+      display: inline-flex;
+      font-size: 1rem;
+      font-weight: 700;
+      height: 1.5rem;
+      justify-content: center;
+      width: 1.5rem;
+    }
+  }
+
+  .sectionContent {
+    transition: max-height 1s ease-out, opacity 0.8s ease-out;
+    max-height: 0;
+    opacity: 0;
+  }
+
+  .openSection {
+
+    .sectionHeader {
+
+      .sectionNumber {
+        background-color: var(--color-bg-accent);
+        color: var(--color-button-text);
+      }
+    }
+
+    .sectionContent {
+      max-height: 37.5rem;
+      opacity: 1;
+    }
+  }
+
+  .closedSection {
+
+    .sectionContent {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+  }
+
+  @media (width > 48rem) and (width < 67.5rem){
+    margin-block: 2rem;
+    width: 36rem;
+
+    .paymentSection {
+      padding: 0 3rem 3rem;
+
+      &.closedSection {
+        padding: 0 3rem;
+      }
+    }
+  }
+
+  @media (width >= 67.5rem) {
+    margin-block: 2rem;
+    width: 36rem;
+
+    .paymentSection {
+      padding: 0 3rem 3rem;
+
+      &.closedSection {
+        padding: 0 3rem;
+      }
+    }
+  }
+}

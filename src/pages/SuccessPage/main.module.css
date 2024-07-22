@@ -1,0 +1,8 @@
+.successMessage {
+  color: var(--color-text-welcome);
+  font-family: var(--font-decorative);
+  font-size: var(--font-size-display);
+  font-weight: 700;
+  line-height: 1.28;
+  margin-block: 6rem 2.75rem;
+}
