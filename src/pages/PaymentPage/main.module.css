@@ -18,9 +18,14 @@
     display: flex;
     font-size: var(--font-size-header);
     font-weight: 700;
-    gap: 1rem;
+    justify-content: space-between;
     line-height: 1.2;
     padding-block: 1.25rem;
+
+    .sectionTitle {
+      display: flex;
+      gap: 1rem;
+    }
 
     .sectionNumber {
       align-items: center;
@@ -59,6 +64,11 @@
   }
 
   .closedSection {
+
+    .editLink {
+      color: var(--color-link-text);
+      font-size: var(--font-size-body-reg);
+    }
 
     .sectionContent {
       max-height: 0;

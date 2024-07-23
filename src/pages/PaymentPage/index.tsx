@@ -18,12 +18,17 @@ export const PaymentPage = () => {
     }
   }
 
+  const editSection = (sectionNumber: number) => {
+    setActiveSection(sectionNumber)
+  }
+
   return (
     <div className={styles.paymentContainer}>
       <AccordionSection
         isActive={activeSection === 1}
         title='Payment information'
         sectionNumber={1}
+        onClick={editSection}
       >
         <CreditCardForm
           onFormSubmit={handleFormSubmit}
@@ -47,14 +52,22 @@ type AccordionSectionProps = {
   sectionNumber: number
   isActive: boolean
   children: ReactNode | string
+  onClick?: (sectionNumber: number) => void
 }
 
 const AccordionSection = ({
   title,
   sectionNumber,
   isActive,
+  onClick,
   children
 }: AccordionSectionProps) => {
+
+  const handleEditClick = () => {
+    if (onClick) {
+      onClick(sectionNumber)
+    }
+  }
 
   return (
     <section
@@ -63,8 +76,18 @@ const AccordionSection = ({
       className={`${styles.paymentSection} ${isActive ? styles.openSection : styles.closedSection}`}
     >
       <div className={styles.sectionHeader}>
-        <div className={styles.sectionNumber}>{sectionNumber}</div>
-        {title}
+        <div className={styles.sectionTitle}>
+          <div className={styles.sectionNumber}>{sectionNumber}</div>
+          {title}
+        </div>
+        {!isActive && onClick && (
+          <div
+            className={styles.editLink}
+            onClick={handleEditClick}
+          >
+            Edit
+          </div>
+        )}
       </div>
       <div className={styles.sectionContent}>
         {children}
