@@ -27,6 +27,7 @@ export const WelcomePage = () => {
             <span className='accent-text'>{`$${userInfo?.balance.toFixed(2)}`}</span>
           </div>
           <Link
+            aria-label='Pay total'
             className='button-link'
             to='/payment'
           >

@@ -113,9 +113,19 @@ export const CreditCardForm = ({
         />
       </div>
       {isFormValid ? (
-        <button onClick={onContinue}>Continue</button>
+        <button
+          aria-label='Continue'
+          onClick={onContinue}
+        >
+          Continue
+        </button>
       ) : (
-        <button type='submit'>Continue</button>
+        <button
+          aria-label='Continue'
+          type='submit'
+        >
+          Continue
+        </button>
       )}
     </form>
   )
